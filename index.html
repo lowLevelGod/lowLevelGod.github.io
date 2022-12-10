@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ro">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+
+    <title>My page title</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Sonsie+One"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <header>
+      <h1>Header</h1>
+    </header>
+
+    <button id="nav-button">Hide</button>
+    <nav>
+      <div class="nav-wrapper">
+        <ul class="nav-list">
+            <a href="#">
+            <li class="nav-item">Acasa</li>
+            </a>
+            <li class="nav-item">Despre</li>
+            <li class="nav-item">Contact</li>
+        </ul>
+      </div>
+    </nav>
+
+    <main></main>
+
+    <footer>
+      <p>©Copyright 2050 by nobody. All rights reversed.</p>
+    </footer>
+
+    <script>
+        document.getElementById("nav-button").onclick = () => {
+            const nav = document.getElementsByClassName("nav-list")[0];
+            nav.classList.toggle("visible-flex");
+        }
+    </script>
+  </body>
+</html>
