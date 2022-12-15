@@ -103,7 +103,6 @@ body {
   align-items: center;
   justify-content: center;
   z-index: 1;
-
 }
 
 .site-footer a {
@@ -331,12 +330,12 @@ body {
     transition: all 1s ease-in-out;
   }
 
-  .nav-wrapper{
+  .nav-wrapper {
     position: relative;
     z-index: 3;
   }
 
-  .header-wrapper{
+  .header-wrapper {
     z-index: 3;
   }
 
@@ -346,5 +345,24 @@ body {
 
   .nav-link :hover {
     box-shadow: none;
+  }
+
+  .social-icons a:active,
+  .social-icons a:focus,
+  .social-icons a:hover {
+    color: #818a91;
+    background-color: #33353d;
+  }
+  .social-icons a.facebook:hover {
+    background-color: #33353d;
+  }
+  .social-icons a.twitter:hover {
+    background-color: #33353d;
+  }
+  .social-icons a.linkedin:hover {
+    background-color: #33353d;
+  }
+  .social-icons a.dribbble:hover {
+    background-color: #33353d;
   }
 }
