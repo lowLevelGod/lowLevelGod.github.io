@@ -1,92 +1,114 @@
-* {
-  margin: 0;
-  padding: 0;
-  /* color: #f2f5f7; */
+/* * {
   font-family: "Roboto Mono";
   letter-spacing: 1px;
   font-weight: 500;
-  font-family: normal;
-}
+  font-size: 20px;
+} */
+
+/* * {
+  outline: 1px solid #f00 !important;
+} */
+
+html,
 body {
-  overflow-x: hidden;
-
+  margin: 0;
+  padding: 0;
+  font-size: 20px;
+  font-family: "Roboto Mono";
+  letter-spacing: 1px;
+  font-weight: 500;
 }
-nav {
-  height: 6rem;
-  width: 100vw;
-  background-color: #131418;
-  box-shadow: 0 3px 20px rgba(0, 0, 0, 0.2);
+
+body {
+  min-height: 100vh;
+}
+
+.tmp {
+  max-width: 100%;
+  width: 100%;
+}
+
+.icon-container {
+  width: 30%;
+  height: 100%;
+  flex: 1;
+}
+
+.icon {
+  width: 100%;
+  height: 100%;
+}
+
+.header-wrapper {
   display: flex;
-  position: fixed;
-  z-index: 10;
+  background-color: #149bfc;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+  width: 100%;
+  height: 10vh;
+  position: sticky;
+  top: 0;
 }
 
-nav a{
-  color: whitesmoke;
+.nav-wrapper {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  flex: 8;
 }
 
-main{
-  padding-top: 10%;
-  padding-bottom: 10%;
+.nav-links-wrapper {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
 }
 
-.main-text{
-  color: black !important;
+.nav-link {
+  list-style: none;
+  width: 100%;
+  text-align: center;
+  height: 100%;
 }
 
-html{
-  scroll-padding-top: 70px; /* height of sticky header */
+.nav-link a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.nav-link :hover {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px -50px 36px -28px inset;
+}
+
+.link-area {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .site-footer {
   background-color: gray;
   color: black;
-  padding-top: 10px;
-  padding-bottom: 0px;
-  position: fixed;
-  bottom: 0;
+  position: sticky;
+  top: 100vh;
   width: 100%;
-  padding-bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+
 }
-.site-footer hr {
-  border-top-color: #bbb;
-  opacity: 0.5;
-}
-.site-footer hr.small {
-  margin: 20px 0;
-}
-.site-footer h6 {
-  color: #fff;
-  font-size: 16px;
-  text-transform: uppercase;
-  margin-top: 5px;
-  letter-spacing: 2px;
-}
+
 .site-footer a {
-  color: blue;
-}
-.site-footer a:hover {
-  color: #3366cc;
   text-decoration: none;
-}
-.footer-links {
-  padding-left: 0;
-  list-style: none;
-}
-.footer-links li {
-  display: block;
-}
-.footer-links a {
-  color: #737373;
-}
-.footer-links a:active,
-.footer-links a:focus,
-.footer-links a:hover {
-  color: #3366cc;
-  text-decoration: none;
-}
-.footer-links.inline li {
-  display: inline-block;
+  color: inherit;
 }
 
 .site-footer .social-icons a {
@@ -103,7 +125,7 @@ html{
   text-align: center;
 }
 
-.site-footer .copyright-text{
+.site-footer .copyright-text {
   text-align: center;
   color: white;
 }
@@ -170,154 +192,159 @@ html{
   background-color: #ea4c89;
 }
 
-/*Styling logo*/
-.logo {
-  padding: 1vh 1vw;
-  text-align: center;
+.map {
+  width: 50%;
+  margin-right: auto;
 }
-.logo img {
-  height: 5rem;
-  width: 5rem;
+.map div {
+  width: 100%;
 }
 
-/*Styling Links*/
-.nav-links {
-  display: flex;
-  list-style: none;
-  width: 88vw;
-  padding: 0 0.7vw;
-  justify-content: space-evenly;
-  align-items: center;
-  text-transform: uppercase;
-}
-.nav-links li a {
-  text-decoration: none;
-  margin: 0 0.7vw;
-}
-.nav-links li a:hover {
-  color: #61dafb;
-}
-.nav-links li {
-  position: relative;
-}
-.nav-links li a::before {
-  content: "";
-  display: block;
-  height: 3px;
-  width: 0%;
-  background-color: #61dafb;
-  position: absolute;
-  transition: all ease-in-out 250ms;
-  margin: 0 0 0 10%;
-}
-.nav-links li a:hover::before {
-  width: 80%;
-}
+/*!
+ * Hamburgers
+ * @description Tasty CSS-animated hamburgers
+ * @author Jonathan Suh @jonsuh
+ * @site https://jonsuh.com/hamburgers
+ * @link https://github.com/jonsuh/hamburgers
+ */
 
-/*Styling Hamburger Icon*/
-.hamburger div {
-  width: 30px;
-  height: 3px;
-  background: #f2f5f7;
-  margin: 5px;
-  transition: all 0.3s ease;
-}
 .hamburger {
   display: none;
 }
 
-.map{
-  width: 50%;
-  margin-right: auto;
+.hamburger-box {
+  width: 40px;
+  height: 24px;
+  display: inline-block;
+  position: relative;
 }
-.map div{
-  width: 100%;
+
+.hamburger-inner {
+  display: block;
+  top: 50%;
+  margin-top: -2px;
+}
+.hamburger-inner,
+.hamburger-inner::before,
+.hamburger-inner::after {
+  width: 40px;
+  height: 4px;
+  background-color: #000;
+  border-radius: 4px;
+  position: absolute;
+  transition-property: transform;
+  transition-duration: 0.15s;
+  transition-timing-function: ease;
+}
+.hamburger-inner::before,
+.hamburger-inner::after {
+  content: "";
+  display: block;
+}
+.hamburger-inner::before {
+  top: -10px;
+}
+.hamburger-inner::after {
+  bottom: -10px;
+}
+/*
+   * Squeeze
+   */
+.hamburger--squeeze .hamburger-inner {
+  transition-duration: 0.075s;
+  transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+.hamburger--squeeze .hamburger-inner::before {
+  transition: top 0.075s 0.12s ease, opacity 0.075s ease;
+}
+.hamburger--squeeze .hamburger-inner::after {
+  transition: bottom 0.075s 0.12s ease,
+    transform 0.075s cubic-bezier(0.55, 0.055, 0.675, 0.19);
 }
 
-/*Stying for small screens*/
-@media screen and (max-width: 980px) {
+.hamburger--squeeze.is-active .hamburger-inner {
+  transform: rotate(45deg);
+  transition-delay: 0.12s;
+  transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+.hamburger--squeeze.is-active .hamburger-inner::before {
+  top: 0;
+  opacity: 0;
+  transition: top 0.075s ease, opacity 0.075s 0.12s ease;
+}
+.hamburger--squeeze.is-active .hamburger-inner::after {
+  bottom: 0;
+  transform: rotate(-90deg);
+  transition: bottom 0.075s ease,
+    transform 0.075s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
 
-
-  .map{
-    width: 100%;
-    margin-right: auto;
-  }
-
-  main{
-    padding-top: 30%;
-    padding-bottom: 20%;
-  }
-  
-
-  nav {
-    position: fixed;
+@media only screen and (max-width: 780px) {
+  .hamburger {
+    padding: 15px 15px;
+    display: inline-block;
+    cursor: pointer;
+    transition-property: opacity, filter;
+    transition-duration: 0.15s;
+    transition-timing-function: linear;
+    font: inherit;
+    color: inherit;
+    text-transform: none;
+    background-color: transparent;
+    border: 0;
+    margin: 0;
+    overflow: visible;
     z-index: 3;
   }
-  .hamburger {
-    display: block;
-    position: absolute;
-    cursor: pointer;
-    right: 5%;
-    top: 50%;
-    transform: translate(-5%, -50%);
-    z-index: 2;
-    transition: all 0.7s ease;
+  .hamburger:hover {
+    opacity: 0.7;
   }
-  .nav-links {
+  .hamburger.is-active:hover {
+    opacity: 0.7;
+  }
+  .hamburger.is-active .hamburger-inner,
+  .hamburger.is-active .hamburger-inner::before,
+  .hamburger.is-active .hamburger-inner::after {
+    background-color: #000;
+  }
+  .nav-links-wrapper {
+    overflow: hidden;
     position: fixed;
-    background: #131418;
+    top: 0;
+    background-color: #149bfc;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+      rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+    flex-direction: column;
     height: 100vh;
     width: 100%;
-    flex-direction: column;
-    clip-path: circle(50px at 90% -20%);
-    -webkit-clip-path: circle(50px at 90% -10%);
-    transition: all 1s ease-out;
-    pointer-events: none;
+    clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
+    transition: all 1s ease-in-out;
+    z-index: 2;
   }
-  .nav-links.open {
-    clip-path: circle(1000px at 90% -10%);
-    -webkit-clip-path: circle(1000px at 90% -10%);
-    pointer-events: all;
+
+  .show-navLinksWrapper {
+    clip-path: polygon(100% 0, 0 0, 0 100%, 100% 100%);
   }
-  .nav-links li {
+
+  .nav-link {
     opacity: 0;
+    transition: all 1s ease-in-out;
   }
-  .nav-links li:nth-child(1) {
-    transition: all 0.5s ease 0.2s;
+
+  .nav-wrapper{
+    position: relative;
+    z-index: 3;
   }
-  .nav-links li:nth-child(2) {
-    transition: all 0.5s ease 0.4s;
+
+  .header-wrapper{
+    z-index: 3;
   }
-  .nav-links li:nth-child(3) {
-    transition: all 0.5s ease 0.6s;
-  }
-  .nav-links li:nth-child(4) {
-    transition: all 0.5s ease 0.7s;
-  }
-  .nav-links li:nth-child(5) {
-    transition: all 0.5s ease 0.8s;
-  }
-  .nav-links li:nth-child(6) {
-    transition: all 0.5s ease 0.9s;
-    margin: 0;
-  }
-  .nav-links li:nth-child(7) {
-    transition: all 0.5s ease 1s;
-    margin: 0;
-  }
-  li.fade {
+
+  .show-nav-link {
     opacity: 1;
   }
-}
-/*Animating Hamburger Icon on Click*/
-.toggle .line1 {
-  transform: rotate(-45deg) translate(-5px, 6px);
-}
-.toggle .line2 {
-  transition: all 0.7s ease;
-  width: 0;
-}
-.toggle .line3 {
-  transform: rotate(45deg) translate(-5px, -6px);
-}
 
+  .nav-link :hover {
+    box-shadow: none;
+  }
+}
