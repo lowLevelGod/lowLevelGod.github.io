@@ -1,13 +1,10 @@
-
-window.addEventListener('DOMContentLoaded', function() {
-
-    // Look for .hamburger
+window.addEventListener("DOMContentLoaded", function () {
+  // Look for .hamburger
   const hamburger = document.querySelector(".hamburger");
   const navLinksWrapper = document.querySelector(".nav-links-wrapper");
   const navLinks = document.querySelectorAll(".nav-links-wrapper li");
   hamburger.classList.remove("is-active");
   navLinksWrapper.classList.remove("show-navLinksWrapper");
-console.log("Hello");
   // On click
   hamburger.addEventListener("click", function () {
     // Toggle class "is-active"
