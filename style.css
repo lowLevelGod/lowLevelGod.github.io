@@ -279,6 +279,30 @@ body {
 }
 
 @media only screen and (max-width: 780px) {
+
+  main{
+    max-width: 100%;
+  }
+  .map {
+    width: 100%;
+    margin-right: auto;
+    max-width: 100%;
+  
+  }
+  .map div {
+    width: 100%;
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+
+  .map div iframe{
+    max-width: 100%;
+  }
+
+
   .hamburger {
     padding: 15px 15px;
     display: inline-block;
